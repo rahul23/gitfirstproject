@@ -1,0 +1,9 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/custom.css: {}
+otc_forms:
+  version: VERSION
+  js:
+    js/otcforms.js: {}

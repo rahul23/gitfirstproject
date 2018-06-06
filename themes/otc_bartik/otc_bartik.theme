@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Theme file.
+ */
+
+use Drupal\node\Entity\Node;
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Element\RenderElement;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+use Drupal\file\FileInterface;
+use Drupal\Core\Url;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\field_collection\Entity\FieldCollectionItem;
+
+
+
+/*function otc_bartik_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+       $variables['someVarName'] = 1111111111;
+}
+
+function otc_bartik_theme_suggestions_field_alter(array &$suggestions, array $variables){ 
+    $variables['someVarName'] = 2222222222;
+}
+
+function otc_bartik_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+    $variables['someVarName'] = 3333333333;
+}
+
+function otc_bartik_paragraph_alter(array &$suggestions, array $variables) {    
+  $variables['someVarName'] = 4444444444;
+}
+
+function otc_bartik_preprocess_field(array $variables) {
+ $variables['someVarName'] = 555555;
+}
+ 
+
+function  otc_bartik_preprocess_paragraph(array $variables){
+    $variables['someVarName'] = 666666666666666;
+}*/
+
+
+function otc_bartik_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ((isset($form['#attributes']['class'][1]) && $form['#attributes']['class'][1] == 'node-bricky-edit-form') || (isset($form['#attributes']['class'][1]) && $form['#attributes']['class'][1] == 'node_bricky_edit_form')) {
+    $form['#attached']['library'][] = 'otc_bartik/otc_forms'; 
+  }
+}
+
+
+function otc_bartik_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ((isset($form['#attributes']['class'][1]) && $form['#attributes']['class'][1] == 'node-bricky-edit-form') || (isset($form['#attributes']['class'][1]) && $form['#attributes']['class'][1] == 'node_bricky_edit_form')) {
+    $form['#attached']['library'][] = 'otc_bartik/otc_forms'; 
+  }
+}
+
+
+function otc_bartik_element_info_alter(array &$types) {
+ if (isset($types['table'])) {
+ $types['table']['#attached']['library'][] = 'otc_bartik/otc_forms'; 
+ }
+}

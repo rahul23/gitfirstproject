@@ -1,0 +1,5 @@
+name: otc_twig_custom
+type: module
+description: OTC Twig Custom
+core: 8.x
+version: 0.1.1

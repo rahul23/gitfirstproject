@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML_Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+
+       #wrapper{
+       	margin: 0px auto;
+       	width: 100%;
+       }
+
+       .contant-box{
+       	width:100%;
+       	max-width: 1200px;
+       	margin: 0px auto;
+       	padding: 15px;
+        box-sizing: border-box;
+       }
+        .contant-box:after{
+          content: "";
+   		  clear: both;
+    	  display: table;   
+    	 }
+        .img-responsive{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+     .col-md{
+      width: 33%;
+      height: auto;
+      float: left;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden;
+     }
+     .col-md h2{
+       color:#003c6b;
+       font-size: 32px;
+     }
+   .upper-text{
+    position: relative;
+   }
+   .upper-text h2{
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    font-size: 28px;
+    text-align: left;
+    padding: 15px 25px;
+    box-sizing: border-box;
+   }
+  @media (max-width: 1024px){
+ 
+  .col-md h2 {
+    font-size: 24px;
+  }
+
+  }  
+ @media (max-width: 768px){
+ .col-md {
+      width: 100%;
+ }
+.col-md h2 {
+    font-size: 28px;
+}
+.upper-text h2{
+  font-size: 22px;
+  padding: 15px 15px;
+}
+
+}
+
+	</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		<div class="contant-box">
+			   <div class="col-md">
+           <img src="images/candy1.jpg" class="img-responsive">
+            <h2>Candy Buffet Supplies</h2>
+         </div>  
+          <div class="col-md">
+           <img src="images/bulk.jpg" class="img-responsive">
+            <h2>Bulk Candy</h2>
+         </div> 
+          <div class="col-md">
+              <img src="images/007.jpg" class="img-responsive">
+               <h2>Personalized Favor Bags & Containers </h2>
+         </div> 
+		 </div>
+
+      <div class="contant-box ">
+         <div class="col-md upper-text">
+           <img src="images/candy.jpg" class="img-responsive">
+            <h2>Candy Butter Supplies</h2>
+         </div>  
+          <div class="col-md upper-text">
+           <img src="images/004.jpg" class="img-responsive">
+            <h2>Bulk Candy</h2>
+         </div> 
+          <div class="col-md upper-text">
+              <img src="images/002.jpg" class="img-responsive">
+               <h2>Personalized Favor Bags & Containers </h2>
+         </div> 
+     </div>
+        </div>
+
+
+
+
+</body>
+</html>
